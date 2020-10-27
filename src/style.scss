@@ -1,0 +1,240 @@
+@import './reset.css';
+$main-font: 'Mulish', sans-serif;
+
+body{
+    padding: 20px;
+    background-color: #303236;
+    font-family: $main-font;
+
+    .search--component{
+        width: 377px;
+        height: 400px;
+        background-color: #3D3F43;
+        border-radius: 15px;
+        padding: 40px 45px;
+        box-sizing: border-box; 
+        margin-bottom: 50px;   
+        box-shadow: 5px 7px 18px -1px rgba(0,0,0,0.64);
+
+        .search-input{
+            background-color: #303236;
+            border-radius: 5px;
+            background-image: url(search.svg);
+            background-repeat: no-repeat;
+            background-position: 5% center;
+            margin-bottom: 30px;
+            
+
+            input{
+                box-sizing: border-box;
+                font-size: 16px;
+                color: rgba($color: #fff, $alpha: 1);
+                width: 100%;
+                height: 50px;
+                outline: 0;
+                background: none;
+                border: none;
+                padding: 0 50px;
+                font-family: inherit;
+                font-weight: 400;
+                font-size: 16px;
+
+                &::placeholder{
+                    color: rgba($color: #fff, $alpha: .5)
+                }
+            }
+        }
+
+        h6{
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        ul{
+
+            li{
+                color: #fff;
+                transition: 200ms color;
+
+                &:hover{
+                    color: #2CCDEA;
+                }
+
+                &.active{
+                    color: #2CCDEA;
+                }
+
+                &:not(:last-child){
+                    margin-bottom: 15px;
+                }
+
+                a{
+                    text-decoration: none;
+                    color: inherit;
+                }
+            }
+        }
+    }
+    
+    .search--component-with-filter{
+        box-sizing: border-box;
+        width: 650px;
+        height: 70px;
+        background-color: #3D3F43;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        padding: 0 25px;
+        box-shadow: 5px 7px 18px -1px rgba(0,0,0,0.64);
+        margin-bottom: 50px;
+        .search-box{
+            flex: 1;
+            display: flex;
+            height: 60%;
+            background-image: url(search.svg);
+            background-repeat: no-repeat;
+            background-position: 0;
+            padding: 0 20px 0 35px;
+            margin: 0 20px 0 0;
+            align-items: center;
+            border-right: solid 1px #303236;
+
+            input{
+                width: 100%;
+                height: 100%;
+                font-size: 16px;
+                color: rgba($color: #fff, $alpha: 0.5);
+                outline: 0;
+                background: transparent;
+                border: none;
+
+                &::placeholder{
+                    font-family: $main-font;
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: rgba($color: #fff, $alpha: 0.5)
+
+                }
+            }
+        }
+
+        .filters{
+            width: 350px;
+            display: flex;
+            justify-content: space-around;
+
+            .option{
+                input{
+                    display: none;
+                }
+
+                label{
+                    cursor: pointer;
+                    user-select: none;
+                    -webkit-user-select: none;
+                    color: #fff;
+                    display: inline-block;
+                    min-width: 110px;
+                    height: 40px;
+                    border-radius: 20px;
+                    line-height: 40px;
+                    text-align: center;
+                    transition: 300ms color, 300ms background-color;
+                }
+
+                input:checked + label{
+                    color: #2CCDEA;
+                    background-color: #303236;
+                }
+
+            }
+        }
+    }
+
+    .address-filter{
+        width: 470px;
+        height: 315px;
+        box-sizing: border-box;
+        border-radius: 15px;
+        padding: 40px 45px;
+        box-shadow: 5px 7px 18px -1px rgba(0,0,0,0.64);
+        background-color: #3D3F43;
+
+        form{
+            display: block;
+            width: 100%;
+            color: #fff;
+
+            ul{
+                li{
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 20px;
+
+                    .key{
+                        width: 100px;
+                    }
+
+                    .value{
+                        flex: 1;
+
+                        select, input{
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            appearance: none;
+
+                            outline: none;
+                            box-sizing: border-box;
+                            width: 100%;
+                            background-color: #303236;
+                            border: none;
+                            border-radius: 5px;
+                            height: 50px;
+                            color: #fff;
+                            font-family: $main-font;
+                            padding-left: 15px;
+                            font-size: 16px;
+                        }
+
+                        select{
+                            background-image: url(arrow-down.svg);
+                            background-repeat: no-repeat;
+                            background-position: 95%;
+                        }
+                    }
+                }
+            }
+
+            .buttons{
+                border-top: 1px solid #303236;
+                margin-top: 40px;
+                padding: 20px;
+                display: flex;
+                justify-content: space-between;
+
+
+                a{
+                    text-decoration: none;
+                    color: rgba($color: #fff, $alpha: .5);
+                }
+
+                button{
+                    cursor: pointer;
+                    top: 50%;
+                    font-family: $main-font;
+                    color: #fff;
+                    font-size: 15px;
+                    width: 150px;
+                    height: 50px;
+                    border-radius: 25px;
+                    border: none;
+                    background: linear-gradient(#31A5D9, #1E96A0);
+                }
+            }
+        }
+    }
+
+}

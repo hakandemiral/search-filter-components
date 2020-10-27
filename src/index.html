@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Components</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.scss">
+</head>
+<body>
+
+    <div class="search--component">
+        <div class="search-input">
+            <input type="text" placeholder="Search something...">
+        </div>
+        <h6>Popular Search</h6>
+        <ul>
+            <li><a href="#">Best sellers</a></li>
+            <li><a href="#">Books</a></li>
+            <li class="active"><a href="#">Harry Potter</a></li>
+            <li><a href="#">LOTR</a></li>
+            <li><a href="#">Jules verne</a></li>
+            <li><a href="#"></a>Witcher Series</li>
+            <li><a href="#">Game of thrones</a></li>
+
+        </ul>
+    </div>
+
+    <div class="search--component-with-filter">
+        <div class="search-box">
+            <input type="text" placeholder="Search...">
+        </div>
+        <div class="filters">
+            <div class="option">
+                <input type="checkbox" name="product" id="product">
+                <label for="product">
+                    Book
+                </label>
+            </div>
+
+            <div class="option">
+                <input type="checkbox" name="cargo" id="cargo">
+                <label for="cargo">
+                    Bluray
+                </label>
+            </div>
+
+            <div class="option">
+                <input type="checkbox" name="customer" id="customer">
+                <label for="customer">
+                    Music
+                </label>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="address-filter">
+        <form>
+            <ul>
+                <li>
+                    <div class="key">Country</div>
+                    <div class="value">
+                        <select>
+                            <option default value="turkey">Turkey</option>
+                            <option value="germany">Germany</option>
+                        </select>
+                    </div>
+                </li>
+                <li>
+                    <div class="key">Province</div>
+                    <div class="value">
+                        <input type="text" value="Istanbul">
+                    </div>
+                </li>
+                <li class="buttons">
+                    <a href="#">Cancel</a>
+                    <button>Apply Filters</button>
+                </li>
+            </ul>
+
+        </form>
+    </div>
+
+</body>
+</html>
