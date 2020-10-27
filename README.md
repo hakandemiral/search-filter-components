@@ -1,4 +1,6 @@
-# web-components-1
+# Search and Filter Components
+
+It is prepared with HTML and CSS, the auxiliary tools I use; postcss, auto-prefixer, sass, babel.
 
 dev
 `yarn dev`
